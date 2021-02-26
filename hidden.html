@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>
+         My Fourth Website
+     </title>
+ </head>
+
+<body>
+
+<h2>Hidden Things by Sanjay</h2>
+
+<form>
+    <label for="form1_credentials">Enter the secret word</label>
+    <input type ="password" id="form1_credentials" name="form1_credentials" min=10 max=50 step=2 value="Secret"> <br>
+
+    <label for="form1_guess">Enter a guess</label>
+    <input type ="text" id="form1_guess" name="form1_guess" autofocus> <br>
+
+    <input type="button" onclick="processGuess()" value="Check the guess">
+</form>
+
+
+<p id="result">The results are displayed</p>
+
+<script> 
+var correct = 0;
+var wrong = 0;
+function processGuess(){
+    console.log("Getting form values")
+    password = document.getElementById("form1_credentials").value
+    guess = document.getElementById("form1_guess").value
+    out = document.getElementById("result")
+    if(password==guess){
+        correct+=1;
+        alert("Congratualtions")
+        out.innerHTML = "Correct count is:"+correct
+    } else {
+        wrong+=1;
+        alert("Sorry")
+        out.innerHTML = "Wrong count is:"+wrong
+    }
+}
+</script>
+
+</body>
+</html> 

@@ -42,6 +42,34 @@ function processGuess(){
     }
 }
 </script>
-
+<div class = "container">
+    <img id="myPlant" src="nemesia.jpg" alt="Check Internet Connection" width=200 height=200 onclick="rotateImage()">
+</div>
+<script>
+    var currentImage = 0;
+    function rotateImage(){
+    switch(currentImage){
+        case 0:
+            document.getElementById("myPlant").src="nemesia.jpg"
+            currentImage+=1
+            alert("The value of curentImage is:"+currentImage)
+            break;
+        case 1:
+            document.getElementById("myPlant").src="abelia.jpg"
+            currentImage+=1
+            alert("The value of curentImage is:"+currentImage)
+            break;
+        case 2:
+            document.getElementById("myPlant").src="selinum.jpg"
+            currentImage+=1
+            alert("The value of curentImage is:"+currentImage)
+            break;
+        default:
+            currentImage = 0;
+            document.getElementById("myPlant").src="nemesia.jpg"
+            alert("The value of curentImage is:"+currentImage)
+    }
+}
+</script>
 </body>
 </html> 
